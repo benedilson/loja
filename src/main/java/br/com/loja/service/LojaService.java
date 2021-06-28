@@ -22,4 +22,12 @@ public class LojaService {
 		lojaDAO.inserir(loja);
 	}
 	
+	public void atualizar(Loja loja) {
+		lojaDAO.atualizar(loja);
+	}
+	
+	public Loja buscarPorCNPJ(Loja loja) {
+		return lojaDAO.buscarPorCNPJ(loja);
+	}
+	
 }

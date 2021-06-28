@@ -6,10 +6,7 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
-import lombok.Data;
-
 @Entity
-@Data
 public class Loja {
 
 	@Id
@@ -31,5 +28,53 @@ public class Loja {
 	
 	@Column(name = "seguimento_loja")
 	private String seguimentoLoja;
+
+	public String getCnpjLoja() {
+		return cnpjLoja;
+	}
+
+	public void setCnpjLoja(String cnpjLoja) {
+		this.cnpjLoja = cnpjLoja;
+	}
+
+	public String getPisoLoja() {
+		return pisoLoja;
+	}
+
+	public void setPisoLoja(String pisoLoja) {
+		this.pisoLoja = pisoLoja;
+	}
+
+	public Integer getNumeroLoja() {
+		return numeroLoja;
+	}
+
+	public void setNumeroLoja(Integer numeroLoja) {
+		this.numeroLoja = numeroLoja;
+	}
+
+	public Boolean getStatusLoja() {
+		return statusLoja;
+	}
+
+	public void setStatusLoja(Boolean statusLoja) {
+		this.statusLoja = statusLoja;
+	}
+
+	public Date getDataLoja() {
+		return dataLoja;
+	}
+
+	public void setDataLoja(Date dataLoja) {
+		this.dataLoja = dataLoja;
+	}
+
+	public String getSeguimentoLoja() {
+		return seguimentoLoja;
+	}
+
+	public void setSeguimentoLoja(String seguimentoLoja) {
+		this.seguimentoLoja = seguimentoLoja;
+	}
 	
 }

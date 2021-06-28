@@ -1,5 +1,6 @@
 package br.com.loja.dao;
 
+import java.util.Date;
 import java.util.List;
 
 import javax.ejb.Stateless;
@@ -21,5 +22,18 @@ public class LojaDAO {
 	public void inserir(Loja loja) {
 		entityManager.persist(loja);
 	}
+	
+	public void atualizar(Loja loja) {
+		if(!loja.getStatusLoja()) {
+			loja.setDataLoja(new Date());
+		}
+		entityManager.merge(loja);
+	}
+	
+	public Loja buscarPorCNPJ(Loja loja) {
+		return entityManager.find(loja.getClass(), loja.getCnpjLoja());
+	}
+	
+	
 	
 }
